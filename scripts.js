@@ -107,11 +107,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     let img_person = document.createElement('img');
-    img_person.src = tg.initDataUnsafe.user.is_premium;
+    img_person.src = tg.initDataUnsafe.user.id;
 
     let personCard = document.getElementById("profile-user");
     let p_person2 = document.createElement('p');
-    p_person2.innerText = tg.initDataUnsafe.user.is_premium;
+    p_person2.innerText = tg.initDataUnsafe.user.id;
     personCard.appendChild(p_person2);
 
     // const { first_name, last_name, username, photo_url } = tg.initDataUnsafe.user;
