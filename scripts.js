@@ -179,7 +179,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     p_person.innerText = `${tg.initDataUnsafe.user.first_name}`;
 
-    personCard.appendChild(img_person);
     personCard.appendChild(p_person);
 
     
