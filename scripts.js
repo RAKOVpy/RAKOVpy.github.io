@@ -108,7 +108,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let personCard = document.getElementById("profile-user");
     let p_person = document.createElement('p');
-    p_person.innerText = `${tg.initDataUnsafe.first_name}`
+
+    p_person.innerText = `${tg.initDataUnsafe.first_name}
+    ${tg.initDataUnsafe.last_name}
+    ${tg.initDataUnsafe.user.id}`
+    
+
     
     personCard.appendChild(p_person)
     
