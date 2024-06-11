@@ -107,12 +107,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let personCard = document.getElementById("profile-user");
     let p_person2 = document.createElement('p');
-    p_person2.innerText = '12312'
+    p_person2.innerText = 'test'
     personCard.appendChild(p_person2)
+
+    const { first_name, last_name, username } = tg.initDataUnsafe.user;
 
     let p_person = document.createElement('p');
 
-    p_person.innerText = `${tg.initDataUnsafe.user.id}`
+    p_person.innerText = `${first_name}
+    ${last_name}
+    ${username}
+    ${123}`
     
 
     
