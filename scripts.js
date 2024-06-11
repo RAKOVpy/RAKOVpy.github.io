@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
         { id: 3, name: 'Мобильный Телефон 3' }
     ];
 
+ 
+
     let cart = [];
 
     const closeCartButton = document.querySelector('.close-cart');
@@ -106,12 +108,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
+    const fetch = require('node-fetch');
+    const token = '7390673577:AAGDg1f_94b3RMwOIbDNHR1kB2ZcuOIGh_0';
+    const apiUrl = `https://api.telegram.org/bot${token}`;
+
+    const ans = fetch(`${apiUrl}/getUserProfilePhotos?user_id=${tg.initDataUnsafe.user.id}`)
+
     let img_person = document.createElement('img');
-    img_person.src = tg.initDataUnsafe.user.photo_url;
+    img_person.src = ans;
 
     let personCard = document.getElementById("profile-user");
     let p_person2 = document.createElement('p');
-    p_person2.innerText = tg.initDataUnsafe.user.photo_url;
+    p_person2.innerText = ans;
     personCard.appendChild(p_person2);
 
     // const { first_name, last_name, username, photo_url } = tg.initDataUnsafe.user;
