@@ -40,7 +40,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     buyButton.addEventListener('click', function () {
-        tg.sendData('534');
+        var cart_ = cart.map(function(name) {
+            return name.id;
+          });
+        tg.sendData(cart_);
     });
 
 
