@@ -60,10 +60,10 @@ main {
     box-sizing: border-box;
 }
 
-.product img {
+/* .product img {
     max-width: 150px;
     height: auto;
-}
+} */
 
 .buy-button {
     background-color: #28a745;
