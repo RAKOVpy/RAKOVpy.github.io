@@ -105,10 +105,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    let personCard = document.getElementById("profile-user");
+    let p_person2 = document.createElement('p');
+    p_person2.innerText = '123'
+    personCard.appendChild(p_person2)
 
     const { first_name, last_name, username } = window.Telegram.WebApp.initDataUnsafe.user;
 
-    let personCard = document.getElementById("profile-user");
     let p_person = document.createElement('p');
 
     p_person.innerText = `${first_name}
@@ -120,9 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     personCard.appendChild(p_person)
 
-    let p_person2 = document.createElement('p');
-    p_person2.innerText = '123'
-    personCard.appendChild(p_person2)
+    
     
 
 });
