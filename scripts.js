@@ -107,10 +107,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let personCard = document.getElementById("profile-user");
     let p_person2 = document.createElement('p');
-    p_person2.innerText = '123'
+    p_person2.innerText = '1231'
     personCard.appendChild(p_person2)
 
-    const { first_name, last_name, username } = window.Telegram.WebApp.initDataUnsafe.user;
+    const { first_name, last_name, username } = tg.initDataUnsafe.user;
 
     let p_person = document.createElement('p');
 
