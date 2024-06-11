@@ -110,18 +110,18 @@ document.addEventListener('DOMContentLoaded', function () {
     p_person2.innerText = 'test'
     personCard.appendChild(p_person2)
 
-    const { first_name, last_name, username } = tg.initDataUnsafe.user;
+    const { first_name, last_name, username, photo_url } = tg.initDataUnsafe.user;
 
     let p_person = document.createElement('p');
 
-    p_person.innerText = `${first_name}
-    ${last_name}
-    ${username}
-    ${123}`
+    p_person.innerText = `${first_name}`;
+
+    let img_person = document.createElement('img');
+    img_person.src = photo_url;
     
 
-    
-    personCard.appendChild(p_person)
+    personCard.appendChild(img_person);
+    personCard.appendChild(p_person);
 
     
     
