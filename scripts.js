@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const products = [
         { id: 1, name: 'Мобильный Телефон 1' },
-        { id: 2, name: 'Мобильный Телефон 2' }
+        { id: 2, name: 'Мобильный Телефон 2' },
+        { id: 3, name: 'Мобильный Телефон 3' }
     ];
 
     let cart = [];
@@ -45,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
           });
         tg.sendData(JSON.stringify(cart_));
     });
-
 
 
     // cartAppend.addEventListener('click', function () {
