@@ -106,19 +106,23 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
+    const { first_name, last_name, username } = window.Telegram.WebApp.initDataUnsafe.user;
+
     let personCard = document.getElementById("profile-user");
     let p_person = document.createElement('p');
 
-    p_person.innerText = `${tg.initDataUnsafe.user.first_name}
-    ${tg.initDataUnsafe.user.last_name}`
+    p_person.innerText = `${first_name}
+    ${last_name}
+    ${username}
+    ${123}`
     
 
     
     personCard.appendChild(p_person)
 
-    // let p_person2 = document.createElement('p');
-    // p_person2.innerText = '123'
-    // personCard.appendChild(p_person2)
+    let p_person2 = document.createElement('p');
+    p_person2.innerText = '123'
+    personCard.appendChild(p_person2)
     
 
 });
