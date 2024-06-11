@@ -110,12 +110,15 @@ document.addEventListener('DOMContentLoaded', function () {
     let p_person = document.createElement('p');
 
     p_person.innerText = `${tg.initDataUnsafe.first_name}
-    ${tg.initDataUnsafe.last_name}
-    ${tg.initDataUnsafe.user.id}`
+    ${tg.initDataUnsafe.last_name}`
     
 
     
     personCard.appendChild(p_person)
+
+    // let p_person2 = document.createElement('p');
+    // p_person2.innerText = '123'
+    // personCard.appendChild(p_person2)
     
 
 });
