@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
             return name.id;
           });
         tg.sendData(JSON.stringify(cart_));
-        tg.sendData('123123');
     });
 
 
