@@ -43,8 +43,10 @@ document.addEventListener('DOMContentLoaded', function () {
         var cart_ = cart.map(function(name) {
             return name.id;
           });
-        tg.sendData(cart_);
+        tg.sendData(JSON.stringify(cart_));
+        tg.sendData('123123');
     });
+
 
 
     // cartAppend.addEventListener('click', function () {
