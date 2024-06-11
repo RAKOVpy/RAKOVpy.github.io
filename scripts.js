@@ -112,23 +112,72 @@ document.addEventListener('DOMContentLoaded', function () {
     // const token = '7390673577:AAGDg1f_94b3RMwOIbDNHR1kB2ZcuOIGh_0';
     // const apiUrl = `https://api.telegram.org/bot${token}`;
 
-    // const ans = fetch(`${apiUrl}/getUserProfilePhotos?user_id=${tg.initDataUnsafe.user.id}`)
+    // const ans = fetch(`${apiUrl}/getUserProfilePhotos?user_id=${453576246}`);
 
-    let img_person = document.createElement('img');
-    // img_person.src = ans;
+    // console.log(ans);
+
+
+
+
+    const TELEGRAM_API_TOKEN = '7390673577:AAGDg1f_94b3RMwOIbDNHR1kB2ZcuOIGh_0';
+    const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_API_TOKEN}`;
+
+    async function getUserProfilePhotos(userId) {
+        const url = `${TELEGRAM_API_URL}/getUserProfilePhotos?user_id=${userId}&limit=1`;
+        const response = await fetch(url);
+        const data = await response.json();
+        return data.result.photos;
+    }
+
+    async function getFileUrl(fileId) {
+        const url = `${TELEGRAM_API_URL}/getFile?file_id=${fileId}`;
+        const response = await fetch(url);
+        const data = await response.json();
+        const filePath = data.result.file_path;
+        return `https://api.telegram.org/file/bot${TELEGRAM_API_TOKEN}/${filePath}`;
+    }
+
+    async function displayProfilePhoto(userId) {
+        const photos = await getUserProfilePhotos(userId);
+
+        if (photos.length > 0) {
+            const photo = photos[0]; // Берем первую фотографию
+            const fileId = photo[photo.length - 1].file_id; // Берем последнюю версию фото (большого размера)
+            const fileUrl = await getFileUrl(fileId);
+            
+            console.log(fileUrl)
+
+            const img = document.createElement('img');
+            img.src = fileUrl;
+            img.alt = 'Profile Photo';
+            img.className = 'img-user'
+            document.getElementById('profile-user').appendChild(img);
+        } else {
+            const message = document.createElement('p');
+            message.textContent = `У пользователя ${userId} нет фотографий профиля.`;
+            document.getElementById('profile-user').appendChild(message);
+        }
+    }
+
+    // Пример использования функции displayProfilePhoto
+    const userId = 453576246; // Укажите ID пользователя
+    displayProfilePhoto(userId);
+
+
+
+
+
+
+
+
 
     let personCard = document.getElementById("profile-user");
-    let p_person2 = document.createElement('p');
-    p_person2.innerText = tg.initDataUnsafe.user.id;
-    personCard.appendChild(p_person2);
 
     // const { first_name, last_name, username, photo_url } = tg.initDataUnsafe.user;
 
     let p_person = document.createElement('p');
 
     p_person.innerText = `${tg.initDataUnsafe.user.first_name}`;
-
-    
 
     personCard.appendChild(img_person);
     personCard.appendChild(p_person);
