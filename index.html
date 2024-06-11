@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет Магазин</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Магазин Мобильных Устройств</h1>
+    </header>
+    <main>
+        <section class="product-list">
+            <div class="cart-icon">
+                <h2>Корзина</h2>
+                <!-- <span class="cart-count">0</span> -->
+            </div>
+            <article class="product" data-id="1">
+                <img src="imgs/phone1.jpg" alt="Phone 1">
+                <h2>Мобильный Телефон 1</h2>
+                <p>Описание телефона 1</p>
+                <button class="buy-button">Купить</button>
+            </article>
+            <article class="product" data-id="2">
+                <img src="imgs/phone2.jpg" alt="Phone 2">
+                <h2>Мобильный Телефон 2</h2>
+                <p>Описание телефона 2</p>
+                <button class="buy-button">Купить</button>
+            </article>
+            
+            <article class="product" data-id="3">
+                <img src="imgs/phone3.jpg" alt="Phone 3">
+                <h2>Мобильный Телефон 3</h2>
+                <p>Описание телефона 3</p>
+                <button class="buy-button">Купить</button>
+            </article>
+
+        </section>
+    </main>
+    <div class="cart-menu">
+        <button class="close-cart">Закрыть</button>
+        <h2>Корзина</h2>
+        <ul class="cart-items"></ul>
+        <button class="checkout-button">Оформить заказ</button>
+    </div>
+
+    <div class="cart-ok-append">
+        <p>Товар добавлен!</p>
+    </div>
+
+    <footer>
+        <p>© 2024 Интернет Магазин</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
