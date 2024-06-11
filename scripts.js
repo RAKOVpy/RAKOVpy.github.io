@@ -109,8 +109,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let personCard = document.getElementById("profile-user");
     let p_person = document.createElement('p');
 
-    p_person.innerText = `${tg.initDataUnsafe.first_name}
-    ${tg.initDataUnsafe.last_name}`
+    p_person.innerText = `${tg.initDataUnsafe.user.first_name}
+    ${tg.initDataUnsafe.user.last_name}`
     
 
     
