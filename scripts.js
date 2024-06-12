@@ -32,13 +32,14 @@ document.addEventListener('DOMContentLoaded', function () {
             const fileId = photo[photo.length - 1].file_id; // Берем последнюю версию фото (большого размера)
             const fileUrl = await getFileUrl(fileId);
             
-            console.log(fileUrl)
+            console.log(fileUrl);
 
             // const img = document.createElement('img');
             // img.src = fileUrl;
             // img.alt = 'Profile Photo';
             // img.className = 'img-user'
-            document.getElementById('profile-user-photo').src = img;
+            let img_user = document.getElementById('profile-user-photo');
+            img_user.src = fileUrl;
         }
     }
 
