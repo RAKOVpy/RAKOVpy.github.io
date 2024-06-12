@@ -34,11 +34,11 @@ document.addEventListener('DOMContentLoaded', function () {
             
             console.log(fileUrl)
 
-            const img = document.createElement('img');
-            img.src = fileUrl;
-            img.alt = 'Profile Photo';
-            img.className = 'img-user'
-            document.getElementById('profile-user').appendChild(img);
+            // const img = document.createElement('img');
+            // img.src = fileUrl;
+            // img.alt = 'Profile Photo';
+            // img.className = 'img-user'
+            document.getElementById('profile-user-photo').src = img;
         }
     }
 
@@ -46,20 +46,26 @@ document.addEventListener('DOMContentLoaded', function () {
     displayProfilePhoto(userId);
 
     
-    let personCard = document.getElementById("profile-user");
+    let p_name = document.getElementById("profile-user-name");
 
-    let h_person = document.createElement('h2');
+    p_name.innerText = `${tg.initDataUnsafe.user.first_name}`;
 
-   h_person.innerText = `${tg.initDataUnsafe.user.first_name}`;
+    let p_id = document.getElementById("profile-user-name");
+
+    p_id.innerText = `ID: ${tg.initDataUnsafe.user.id}`;
+
+    // let h_person = document.createElement('h2');
+
+//    h_person.innerText = `${tg.initDataUnsafe.user.first_name}`;
     // p_person.innerText = 'Rakov'
 
-    personCard.appendChild(h_person);
+    // personCard.appendChild(h_person);
     
-    let p_person = document.createElement('p');
-    p_person.innerText = userId
+    // let p_person = document.createElement('p');
+    // p_person.innerText = userId
     
 
-    personCard.appendChild(p_person);
+    // personCard.appendChild(p_person);
 
 
 

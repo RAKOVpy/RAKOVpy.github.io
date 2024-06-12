@@ -122,9 +122,6 @@ body {
     cursor: pointer;
 }
 
-
-
-
 .scroll-container {
     width: 100%;
     overflow-x: auto;
@@ -144,10 +141,41 @@ body {
 }
 
 .image-list img {
-    max-height: 100px;
+    max-height: 150px;
     height: auto;
 }
 
 .scroll-container {
     scroll-behavior: smooth;
+}
+
+
+.profile-block {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* width: 250px; */
+    background-color: #f9f9f9;
+}
+
+.profile-image img {
+    border-radius: 50%;
+}
+
+.profile-info {
+    margin-left: 10px;
+}
+
+.profile-info .name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.profile-info .id {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
 }
