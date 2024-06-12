@@ -140,11 +140,11 @@ body {
 
 .image-list li {
     display: inline-block;
-    margin-right: 10px; /* Настройте отступ по вашему усмотрению */
+    margin-right: 10px;
 }
 
 .image-list img {
-    max-height: 100px; /* Настройте высоту по вашему усмотрению */
+    max-height: 100px;
     height: auto;
 }
 
